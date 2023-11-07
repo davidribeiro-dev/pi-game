@@ -11,7 +11,7 @@ Version  0.9 - Stable mutiplayer, Make in game elements such as UI, map geomentr
     
     Version 0.9.5 (Opitonal) - Make a seprate build for debuging (Debug build) 
 
-Version  1.0 - Full relase, stable build, bug fixes, stable and good looking UI
+Version  1.0 - Full relase, stable build, bug fixes, stable, and streamlined  UI.
 
 
 
