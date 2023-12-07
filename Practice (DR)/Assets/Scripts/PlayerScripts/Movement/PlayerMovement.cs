@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using Photon.Pun;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -49,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 moveDirection;
     public Transform orientation;
     public MovementState state;
+    PhotonView view;
 
     public enum MovementState
     {
@@ -70,26 +72,32 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
         readyToJump = true;
         startYScale = transform.localScale.y;
+
+        view = GetComponent<PhotonView>();
     }
     void Update()
     {
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
-        MyInput();
-        SpeedControl();
-        StateHandler();
+       if (view.IsMine)
+        {
+            grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+            MyInput();
+            SpeedControl();
+            StateHandler();
 
-        if (grounded)
-        {
-            rb.drag = groundDrag;
-        }
-        else
-        {
-            rb.drag = 0;
+            if (grounded)
+            {
+                rb.drag = groundDrag;
+            }
+            else
+            {
+                rb.drag = 0;
+            }
         }
     }
     private void FixedUpdate()
     {
-        MovePlayer();
+           if(view.IsMine)
+            MovePlayer();
     }
 
     //General
