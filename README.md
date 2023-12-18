@@ -14,4 +14,8 @@ Version  0.9 - Stable mutiplayer, Make in game elements such as UI, map geomentr
 Version  1.0 - Full relase, stable build, bug fixes, stable, and streamlined  UI.
 
 
+# Bugs:
+Multiplayer synching not working for one of the players. 
+
+
 
