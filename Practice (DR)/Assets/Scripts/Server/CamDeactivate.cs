@@ -14,8 +14,4 @@ public class CamDeactivate : MonoBehaviourPunCallbacks
         }
     }
 
-    void Update()
-    {
-        
-    }
 }

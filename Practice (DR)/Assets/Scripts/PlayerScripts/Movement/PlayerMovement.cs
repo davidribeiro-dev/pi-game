@@ -74,6 +74,9 @@ public class PlayerMovement : MonoBehaviour
         startYScale = transform.localScale.y;
 
         view = GetComponent<PhotonView>();
+
+        if (!view.IsMine)
+            Destroy(rb);
     }
     void Update()
     {
@@ -83,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
             MyInput();
             SpeedControl();
             StateHandler();
-
+    
             if (grounded)
             {
                 rb.drag = groundDrag;
@@ -188,7 +191,7 @@ public class PlayerMovement : MonoBehaviour
         //slope
         if (OnSlope() && !exitingSlope)
         {
-            rb.AddForce(GetSlopeMoveDirection() * moveSpeed * 20f, ForceMode.Force);
+            rb.AddForce(GetSlopeMoveDirection() * moveSpeed * 20f, ForceMode.Force );
 
             if (rb.velocity.y > 0)
             {
