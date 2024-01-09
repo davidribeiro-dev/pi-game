@@ -1,6 +1,6 @@
 # Pi-Game-3.0-
 Official Pi Game 3
-Current Build: 0.1.2- As of 11/6/23
+Current Build: 0.7.5- As of 1/9/24
 # Milestones:
 
 Version  0.5 - Finish basic movement, maps, and UI.
