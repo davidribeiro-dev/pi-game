@@ -14083,9 +14083,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1300086636}
   - component: {fileID: 1300086635}
+  - component: {fileID: 1300086637}
+  - component: {fileID: 1300086638}
   m_Layer: 0
-  m_Name: SpawnPlayers
-  m_TagString: Untagged
+  m_Name: GameManager
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14102,7 +14104,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3f6688a6926094998f7f80d20eb5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovement: {fileID: 0}
   playerPrefab: {fileID: 8385172116976328312, guid: e6c4d2b7b3487f549a7beb4851110e4c, type: 3}
+  gameTime: 40
+  gameTimerEnd: 0
+  gameStarted: 0
   minX: 1
   maxX: -1
   minZ: 1
@@ -14122,6 +14128,44 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1300086637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300086634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 1
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &1300086638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300086634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 369349f89dbc0a34db51af8cc197c1cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameController: {fileID: 0}
+  playerMovement: {fileID: 0}
+  localPlayer: {fileID: 0}
+  tagging: {fileID: 0}
 --- !u!1 &1502912152
 GameObject:
   m_ObjectHideFlags: 0
@@ -29847,7 +29891,7 @@ Mesh:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1300086636}
   - {fileID: 856139270}
   - {fileID: 1502912157}
   - {fileID: 1024659274}
-  - {fileID: 1300086636}

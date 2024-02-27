@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Wallclimbing : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Wallclimbing : MonoBehaviour
     public Rigidbody rb;
     public PlayerMovement pm;
     public LayerMask whatIsWall;
+    PhotonView view;
 
     [Header("Climbing")]
     public float climbSpeed;

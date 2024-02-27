@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using Photon.Pun;
+using System.Runtime.CompilerServices;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -45,12 +46,13 @@ public class PlayerMovement : MonoBehaviour
     float verticalInput;
 
     [Header("References")]
+    public GameObject self;
     public Wallclimbing climbingScript;
     Rigidbody rb;
     Vector3 moveDirection;
     public Transform orientation;
     public MovementState state;
-    PhotonView view;
+    public PhotonView view;
 
     public enum MovementState
     {
@@ -69,14 +71,14 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        view = GetComponent<PhotonView>();
         rb.freezeRotation = true;
         readyToJump = true;
         startYScale = transform.localScale.y;
 
-        view = GetComponent<PhotonView>();
-
         if (!view.IsMine)
             Destroy(rb);
+       // localPlayer = this;
     }
     void Update()
     {

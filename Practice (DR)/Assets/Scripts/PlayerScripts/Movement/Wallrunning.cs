@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Http.Headers;
 using UnityEngine;
+using Photon.Pun;
 
 public class Wallrunning : MonoBehaviour
 {
@@ -45,6 +46,7 @@ public class Wallrunning : MonoBehaviour
     public Transform orientation;
     public PlayerMovement pm;
     public Rigidbody rb;
+    PhotonView view; 
     void Start()
     {
         pm = GetComponent<PlayerMovement>();

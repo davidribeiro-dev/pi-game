@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Grappling : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Grappling : MonoBehaviour
     public Transform gunTip, cam, player;
     public LayerMask whatIsGrappeable;
     public PlayerMovement pm;
+    PhotonView view;
 
     [Header("Swinging")]
     private float maxSwingDistance = 25f;
