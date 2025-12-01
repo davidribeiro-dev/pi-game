@@ -9,13 +9,13 @@ Version  0.8 - Local muitplayer with following mechanics: Tag system, Mutiplayer
 
 Version  0.9 - Stable mutiplayer, Make in game elements such as UI, map geomentry, movment stable. 
     
-    Version 0.9.5 (Opitonal) - Make a seprate build for debuging (Debug build) 
+    Version 0.9.5 (Opitonal) - Make a seprate build for debugging (Debug build) 
 
 Version  1.0 - Full relase, stable build, bug fixes, stable, and streamlined  UI.
 
 
 # Bugs:
-Multiplayer synching not working for one of the players. 
+Multiplayer tag system synching not working for one of the players. 
 
 
 
