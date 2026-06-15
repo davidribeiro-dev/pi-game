@@ -7,7 +7,7 @@
 
 > Copyright © 2024–2026 David Ribeiro (Pi Studios). All rights reserved.
 
-A Unity game project that evolved across three versions — from a tutorial-driven tabletop tennis prototype, to a multiplayer tag game built using Photon Engine, to **Vertigo**, a from-scratch rebuild using Unity netcode with an advanced movement system.
+A Unity game project that evolved across three versions — from a tutorial-driven tabletop tank prototype, to a multiplayer tag game built using Photon Engine, to **Vertigo**, a from-scratch rebuild using Unity netcode with an advanced movement system.
 
 ## Contents
 
@@ -23,13 +23,13 @@ A Unity game project that evolved across three versions — from a tutorial-driv
 
 ## Overview
 
-Pi Game began as a guided YouTube walkthrough — a single-machine tabletop tennis game built to learn Unity fundamentals. Over two later versions it became a multiplayer tag game, and, in the latest iteration (**Vertigo**), a from-scratch rebuild with a real networking stack and a fluid movement system. This repository preserves all three versions side-by-side as a record of how the project, and my skills as a developer, evolved.
+Pi Game began as a guided YouTube walkthrough — a single-machine tabletop tank game built to learn Unity fundamentals. Over two later versions it became a multiplayer tag game, and, in the latest iteration (**Vertigo**), a from-scratch rebuild with a real networking stack and a fluid movement system. This repository preserves all three versions side-by-side as a record of how the project, and my skills as a developer, evolved.
 
 ## Versions
 
 | Version | What it is | Status |
 | --- | --- | --- |
-| **v2.0** | Tabletop tennis game. Started from a YouTube walkthrough and extended with original features. First Unity project. | Archived |
+| **v2.0** | Tabletop tank game. Started from a YouTube walkthrough and extended with original features. First Unity project. | Archived |
 | **v3.0** | First attempt at a multiplayer tag game, built using **Photon Engine**. Networking did not fully stabilize. | Archived |
 | **v3.0 Vertigo** | Full rebuild using **Unity's netcode**. Fluid advanced movement and proper tag mechanics. UI still in progress. | Active reference |
 
@@ -61,7 +61,7 @@ Built around a charge-based design where dash energy can be spent on advanced tr
 
 ### v2.0
 
-- Tabletop tennis game built from a YouTube tutorial.
+- Tabletop tank game built from a YouTube tutorial.
 - Extended with personal features beyond the tutorial.
 
 ## Tech Stack
@@ -76,7 +76,7 @@ Built around a charge-based design where dash energy can be spent on advanced tr
 
 ```
 pi-game/
-├── v2.0/                 # Tabletop tennis (first Unity project)
+├── v2.0/                 # Tabletop tank (first Unity project)
 ├── v3.0/                 # Multiplayer tag, Photon
 ├── v3.0-vertigo/         # Rebuild on Unity netcode (UI in progress)
 ├── .gitignore            # Unity-aware
@@ -107,5 +107,4 @@ Developed solo under the **Pi Studios** moniker by **David Ribeiro** ([@davidrib
 ## License
 
 Source code in this repository is © 2024–2026 David Ribeiro (Pi Studios). All rights reserved. No reuse without permission.
-
 
